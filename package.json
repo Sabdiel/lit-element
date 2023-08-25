@@ -1,0 +1,21 @@
+{
+  "name": "simple-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "wds --node-resolve --watch --open"
+  },
+  "keywords": [
+    "Lit"
+  ],
+  "author": "Sabdiel",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "lit": "^2.8.0"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.3.0"
+  }
+}
