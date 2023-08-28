@@ -32,19 +32,21 @@ export class SimpleComponent extends LitElement {
 
   render() {
     return html`
-      <input
-        type="text"
-        .value=${this.inputText}
-        @keyup=${(e) => e.key === 'Enter' && this.nuevaTarea()}
-        @input=${(e) => (this.inputText = e.target.value)}
-      />
+
+      <div style="padding: 15px; margin: 25px; border: 1px solid; width: fit-content;">
+        <input
+          type="text"
+          .value=${this.inputText}
+          @keyup=${(e) => e.key === 'Enter' && this.nuevaTarea()}
+          @input=${(e) => (this.inputText = e.target.value)}
+        />
+      </div>
       <ul>
         ${this.tasks.map(
           (task, i) =>
             html`
               <li style="text-decoration: ${task.done ? 'line-through' : 'none'};
-               color: ${task.done ? 'gray' : 'black'}; 
-               background-color: ${Date.now() - task.timeAdded > 5000 ? 'red' : 'green'};">
+               color: ${task.done ? 'gray' : 'black'}; ">
                 <input
                   type="checkbox"
                   .checked=${task.done}
@@ -58,4 +60,6 @@ export class SimpleComponent extends LitElement {
     `;
   }
 }
+
+//background-color: ${Date.now() - task.timeAdded > 5000 ? 'red' : 'green'};
 customElements.define('simple-component', SimpleComponent);
