@@ -33,7 +33,7 @@ export class SimpleComponent extends LitElement {
   render() {
     return html`
 
-      <div style="padding: 15px; margin: 25px; border: 1px solid; width: fit-content;">
+      <div style="padding: 15px; margin: 25px; border: 1px solid; width: fit-content; border-radius:3px;">
         <input
           type="text"
           .value=${this.inputText}
